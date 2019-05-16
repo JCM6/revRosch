@@ -1,6 +1,6 @@
 import math
 import random
-import bpy
+
 
 #define iterations
 iterMax = 5
@@ -26,7 +26,7 @@ wz = []
 pointMtrx = [x, y, z]
 wildPointMtrx = [wx], [wy], [wz]
 
-
+#populating the standard point matrix.
 for i in range(iterMax):
     x.append(random.randrange(startPoint, maxRange, stepInc))
 
@@ -35,6 +35,16 @@ for i in range(iterMax):
 
 for i in range(iterMax):
     z.append(random.randrange(startPoint, maxRange, stepInc))
+
+#populating the wild point matrix
+for i in range(iterMax):
+    wx.append(random.randrange(startPoint, maxRange, stepInc))
+
+for i in range(iterMax):
+    wy.append(random.randrange(startPoint, maxRange, stepInc))
+
+for i in range(iterMax):
+    wz.append(random.randrange(startPoint, maxRange, stepInc))
 
 print('matrix of pointvalues')
 print(pointMtrx)    
